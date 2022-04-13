@@ -10,7 +10,7 @@ resource "azurerm_container_registry" "Terra-acr" {
   location            = var.azureRegion
   sku                 = "Standard"
   admin_enabled       = false
-  
+
 }
 
 # https://www.terraform.io/language/values/outputs#declaring-an-output-value

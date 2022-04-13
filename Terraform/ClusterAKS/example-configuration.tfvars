@@ -13,4 +13,3 @@ LogsWorkspaceName      = ""
 enable-privatecluster  = false
 enable-AzurePolicy     = false
 networkpolicy_plugin   = "azure"
-"

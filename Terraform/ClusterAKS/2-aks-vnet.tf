@@ -6,12 +6,12 @@
 #    \ \/ / | | '__| __| | | |/ _` | |  | . ` |/ _ \ __\ \ /\ / / _ \| '__| |/ /   / _` | '_ \ / _` |   \___ \| | | | '_ \| '_ \ / _ \ __/ __|
 #     \  /  | | |  | |_| |_| | (_| | |  | |\  |  __/ |_ \ V  V / (_) | |  |   <   | (_| | | | | (_| |   ____) | |_| | |_) | | | |  __/ |_\__ \
 #      \/   |_|_|   \__|\__,_|\__,_|_|  |_| \_|\___|\__| \_/\_/ \___/|_|  |_|\_\   \__,_|_| |_|\__,_|  |_____/ \__,_|_.__/|_| |_|\___|\__|___/                                                                                                                                     
-                                                                                                                                          
+
 
 resource "azurerm_virtual_network" "Terra_aks_vnet" {
   name                = var.aks_vnet_name
-  location                   = var.azure_region
-  resource_group_name        = var.resource_group
+  location            = var.azure_region
+  resource_group_name = var.resource_group
   address_space       = ["10.0.0.0/8"]
 }
 
@@ -28,7 +28,7 @@ resource "azurerm_role_assignment" "Terra-aks-vnet-role" {
 
 resource "azurerm_subnet" "Terra_aks_subnet" {
   name                 = "aks_subnet"
-  resource_group_name        = var.resource_group
+  resource_group_name  = var.resource_group
   virtual_network_name = azurerm_virtual_network.Terra_aks_vnet.name
   address_prefixes     = ["10.240.0.0/16"]
 }

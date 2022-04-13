@@ -15,8 +15,8 @@ variable "resource_group" {
 
 # Virtual Network name
 variable "aks_vnet_name" {
-    type = string
-    default = "aksvnet"
+  type    = string
+  default = "aksvnet"
 }
 
 
@@ -57,7 +57,7 @@ variable "enable-AzurePolicy" {
 
 # supported values are : patch, rapid, stable
 variable "automatic-channel-upgrade" {
-  type = string
+  type    = string
   default = "patch"
 }
 
@@ -96,7 +96,7 @@ variable "defaultpool-vmsize" {
   description = "Size of VM"
   # check if the choosen size is available in Azure region you selected : az vm list-usage --location NAMEOFAZUREREGION -o table
   type    = string
-  default = "Standard_D2s_v3"
+  default = "standard_d2as_v5"
 }
 
 variable "defaultpool-ostype" {

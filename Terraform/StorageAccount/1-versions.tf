@@ -23,8 +23,7 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "= 2.98.0"
     }
-
-}
+  }
 }
 
 # Configure the Azure Provider
